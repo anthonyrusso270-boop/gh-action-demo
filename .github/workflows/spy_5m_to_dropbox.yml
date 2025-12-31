@@ -30,4 +30,4 @@ jobs:
           IBKR_CLIENT_ID: ${{ secrets.IBKR_CLIENT_ID }}
           DROPBOX_SPY_5M_PATH: "/finance_data_platform/demo/spy_5m.csv"
         run: |
-          python tools/ibkr_spy_5m_to_dropbox.py
+          python -m tools.ibkr_spy_5m_to_dropbox
