@@ -1,9 +1,11 @@
 name: Demo every 5 minutes
 
 on:
+  workflow_dispatch: {}      # <--- adds the "Run workflow" button
+  push:
+    branches: [ "main" ]     # <--- runs immediately when you push
   schedule:
-    - cron: "*/5 * * * *"   # every 5 minutes (UTC)
-  workflow_dispatch: {}     # manual run button
+    - cron: "*/5 * * * *"    # every 5 minutes (UTC)
 
 jobs:
   run:
